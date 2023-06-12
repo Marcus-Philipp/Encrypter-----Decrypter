@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="icon" href="./Encryption-and-Decryption.png">
+    <title>Encrypter & Decrypter</title>
+</head>
+<body>
+    <header class="header-container">
+        <img id="logo" src="./Encryption-and-Decryption.png" alt="Encrypter & Decrypter-logo">
+        <h1>Encrypter & Decrypter</h1>
+    </header>
+    <main>
+        <div class="button-container">
+            <div><button style="--clr:#FF8A44" data-text="&nbsp;&nbsp;Encrypter&nbsp;" class="encrypter-button">&nbsp;&nbsp;Encrypter&nbsp;</button></div>
+            <div><button style="--clr:#00ACC4" data-text="&nbsp;&nbsp;Decrypter&nbsp;" class="decrypter-button">&nbsp;&nbsp;Decrypter&nbsp;</button></div>
+        </div>
+        <div class="lock">
+            <div class="lock-top">
+                <div class="lock-inside">
+                <div class="lock-function"></div>
+            </div>
+        </div>
+        <div class="lock-bottom">
+            <textarea class="textarea" name="textarea" rows="4" cols="30" placeholder="Text hier einfuegen"></textarea>
+            <button class="encrypt-decrypt"></button>
+            <button class="reset-encrypt-decrypt"></button>
+        </div>
+        </div>
+        <div class="result-container">
+            <textarea class="result"></textarea>
+            <button class="reset-text">RESET TEXT</button>
+            <button class="reset-complete">RESET COMPLETE</button>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
