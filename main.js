@@ -151,7 +151,7 @@ const resetText = () => {
   lockFunction.classList.remove('animation-close', 'animation-open');
   result.innerHTML = '';
   textarea.value = '';
-  schloss.classList.remove('lock-disappear');
+  lock.classList.remove('lock-disappear');
   resultBox.classList.remove('result-fade-in');
   lockDisplay('flex');
   resultBox.style.display = 'none'
