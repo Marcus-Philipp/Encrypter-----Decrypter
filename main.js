@@ -58,6 +58,7 @@ const cryptButton = select('.encrypt-decrypt');
 const textarea = select('.textarea');
 const resultBox = select('.result-container');
 const result = select('.result');
+const copyButton = select('.copy-button');
 
 // Sichtbarkeit von Elementen.
 const displayButton = (event) => {
@@ -146,6 +147,16 @@ cryptButton.addEventListener('click', () => {
   cryptAnimations();
 });
 
+// Ereignishandler zum kopieren des gesamten Crypttextes.
+copyButton.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(result.value);
+    alert('Text kopiert!');
+} catch (err) {
+    console.error('Fehler beim Kopieren des Textes: ', err);
+}
+});
+
 // Zuruecksetzen des Textes.
 const resetText = () => {
   lockFunction.classList.remove('animation-close', 'animation-open');
@@ -167,7 +178,7 @@ const resetComplete = () => {
   titleChange.innerHTML = 'Encrypter & Decrypter';
 };
 
-// Ereignishandler Zuruecksetzen des Encrypters / Decrypters
+// Ereignishandler Zuruecksetzen des Encrypters / Decrypters.
 
 const resetEnDecrypter = select('.reset-encrypt-decrypt');
 resetEnDecrypter.addEventListener('click', resetComplete);
@@ -179,5 +190,3 @@ resetButton.addEventListener('click', resetText);
 // Ereignishandler Zuruecksetzen der vollstaendigen Anwendung.
 const resetCompleteButton = select('.reset-complete');
 resetCompleteButton.addEventListener('click', resetComplete);
-
-
